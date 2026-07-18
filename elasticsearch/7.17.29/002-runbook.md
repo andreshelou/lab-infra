@@ -124,10 +124,11 @@ es03
 
 En cada nodo modificar únicamente los parámetros específicos.
 
-Editar:
 
-```
-configs/elasticsearch.yml
+Copiar el yaml  configs/elasticsearch.yml aL
+
+```bash
+/etc/elasticsearch/elasticsearch.yml
 ```
 
 Modificar:
@@ -140,29 +141,10 @@ es02
 es03
 ```
 
-Editar:
-
-```
-configs/hosts
-```
-
-Contenido.
-
-```text
-192.168.1.101 es01
-192.168.1.102 es02
-192.168.1.103 es03
-```
-
-Copiar la configuración.
+Agregar al hosts en /etc/ los nodos del cluster: 
+Ejemplo en el configs/hosts
 
 ```bash
-sudo cp configs/elasticsearch.yml \
-    /etc/elasticsearch/elasticsearch.yml
-```
-
-```bash
-sudo cp configs/hosts \
     /etc/hosts
 ```
 
