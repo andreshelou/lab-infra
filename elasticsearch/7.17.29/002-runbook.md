@@ -145,7 +145,7 @@ Agregar al hosts en /etc/ los nodos del cluster:
 Ejemplo en el configs/hosts
 
 ```bash
-    /etc/hosts
+/etc/hosts
 ```
 
 Hostname.
