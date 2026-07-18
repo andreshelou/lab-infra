@@ -94,30 +94,6 @@ id elasticsearch
 /usr/share/elasticsearch/jdk/bin/java --version
 ```
 
-Crear directorios para el laboratorio.
-
-```bash
-mkdir -p ~/lab-infra/elasticsearch/7.17.29/configs
-```
-
-Copiar archivos de configuración.
-
-```bash
-sudo cp configs/jvm.options \
-    /etc/elasticsearch/jvm.options.d/lab.options
-```
-
-```bash
-sudo cp configs/elasticsearch.yml \
-    /etc/elasticsearch/elasticsearch.yml
-```
-
-Habilitar el servicio.
-
-```bash
-sudo systemctl enable elasticsearch
-```
-
 **No iniciar Elasticsearch todavía.**
 
 ---
@@ -207,11 +183,14 @@ Iniciar Elasticsearch.
 ```bash
 sudo systemctl start elasticsearch
 ```
+```bash
+sudo systemctl enable elasticsearch
+```
 
 Verificar servicio.
 
 ```bash
-systemctl status elasticsearch
+sudo systemctl status elasticsearch
 ```
 
 Verificar nodo.
@@ -259,18 +238,3 @@ Cluster GREEN
 ```
 
 ---
-
-# Próximos laboratorios
-
-- APIs
-- CRUD
-- Bulk
-- Search
-- Mapping
-- Templates
-- Aliases
-- Shards
-- Replicas
-- Recovery
-- Failover
-- Migración Elasticsearch → OpenSearch
