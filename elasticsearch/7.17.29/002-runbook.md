@@ -124,9 +124,19 @@ es03
 
 En cada nodo modificar únicamente los parámetros específicos.
 
+Cambiar el hostname e ip al correspondiente para cada host
+
+Cambiar el nombre de host editando:
+```bash
+/etc/hostname
+```
+
+Cambiar la ip editando: 
+```bash
+/etc/netplan/50-cloud-init.yaml
+```
 
 Copiar el yaml  configs/elasticsearch.yml aL
-
 ```bash
 /etc/elasticsearch/elasticsearch.yml
 ```
