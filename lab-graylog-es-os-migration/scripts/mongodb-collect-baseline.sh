@@ -261,16 +261,8 @@ run_mongodb_check \
 run_mongodb_check \
     "2. MongoDB Version" \
     "MongoDB version collected" \
-    'const info = db.adminCommand({ buildInfo: 1 });
-     EJSON.stringify({
-         version: info.version,
-         gitVersion: info.gitVersion,
-         allocator: info.allocator,
-         javascriptEngine: info.javascriptEngine,
-         bits: info.bits,
-         modules: info.modules
-     }, null, 2)'
-
+    'EJSON.stringify({ version: db.version() }, null, 2)'
+    
 REPLICA_SET_STATUS=""
 
 section "3. Replica Set Status"
