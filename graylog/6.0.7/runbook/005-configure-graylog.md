@@ -176,6 +176,36 @@ El archivo `server.conf` contiene la configuración necesaria para permitir el i
 
 El servicio aún no ha sido iniciado.
 
+## Opciones de JAVA
+
+Editar el archivo graylog-server en /etc/defaults por ejemplo para agregar el timezone
+
+```bash
+# Path to a custom java executable. By default the java executable of the
+# bundled JVM is used.
+#JAVA=/usr/bin/java
+
+# Default Java options for heap and garbage collection.
+GRAYLOG_SERVER_JAVA_OPTS="-Xms1g -Xmx1g -server -XX:+UseG1GC -XX:-OmitStackTraceInFastThrow"
+
+# Avoid endless loop with some TLSv1.3 implementations.
+GRAYLOG_SERVER_JAVA_OPTS="$GRAYLOG_SERVER_JAVA_OPTS -Djdk.tls.acknowledgeCloseNotify=true"
+
+# Fix for log4j CVE-2021-44228
+GRAYLOG_SERVER_JAVA_OPTS="$GRAYLOG_SERVER_JAVA_OPTS -Dlog4j2.formatMsgNoLookups=true"
+
+# Set Timezone to America/Argentina/Buenos_Aires
+GRAYLOG_SERVER_JAVA_OPTS="$GRAYLOG_SERVER_JAVA_OPTS -Duser.timezone=America/Argentina/Buenos_Aires"
+
+# Pass some extra args to graylog-server. (i.e. "-d" to enable debug mode)
+GRAYLOG_SERVER_ARGS=""
+
+# Program that will be used to wrap the graylog-server command. Useful to
+# support programs like authbind.
+GRAYLOG_COMMAND_WRAPPER=""
+```
+
+
 ## Checklist
 
 - [ ] Backup realizado.
