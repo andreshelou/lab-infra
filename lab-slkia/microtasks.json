@@ -2,19 +2,19 @@
     {
         "id": "T001",
         "goal": "Crear hello.txt",
-        "status": "PENDING",
+        "status": "QUEUED",
         "depends_on": []
     },
     {
         "id": "T004",
         "goal": "Crear hello.txt",
-        "status": "PENDING",
+        "status": "QUEUED",
         "depends_on": []
     },
     {
         "id": "T005",
         "goal": "Agregar segunda linea",
-        "status": "PENDING",
+        "status": "QUEUED",
         "depends_on": []
     }
 ]

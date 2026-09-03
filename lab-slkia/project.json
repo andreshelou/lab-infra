@@ -1,35 +1,40 @@
 {
     "project_id": "P001",
     "tasks": [
-      {
-        "id": "T001",
-        "goal": "Crear hello.txt",
-        "status": "PENDING",
-        "depends_on": []
-      },
-      {
-        "id": "T002",
-        "goal": "Agregar segunda línea",
-        "status": "PENDING",
-        "depends_on": ["T001"]
-      },
-      {
-        "id": "T003",
-        "goal": "Agregar segunda línea",
-        "status": "PENDING",
-        "depends_on": ["T001","T002"]
-      },
-      {
-        "id": "T004",
-        "goal": "Crear hello.txt",
-        "status": "PENDING",
-        "depends_on": []
-      },
-      {
-        "id": "T005",
-        "goal": "Agregar segunda linea",
-        "status": "PENDING",
-        "depends_on": []
-      }
+        {
+            "id": "T001",
+            "goal": "Crear hello.txt",
+            "status": "QUEUED",
+            "depends_on": []
+        },
+        {
+            "id": "T002",
+            "goal": "Agregar segunda linea",
+            "status": "PENDING",
+            "depends_on": [
+                "T001"
+            ]
+        },
+        {
+            "id": "T003",
+            "goal": "Agregar segunda linea",
+            "status": "PENDING",
+            "depends_on": [
+                "T001",
+                "T002"
+            ]
+        },
+        {
+            "id": "T004",
+            "goal": "Crear hello.txt",
+            "status": "QUEUED",
+            "depends_on": []
+        },
+        {
+            "id": "T005",
+            "goal": "Agregar segunda linea",
+            "status": "QUEUED",
+            "depends_on": []
+        }
     ]
-  }
+}
