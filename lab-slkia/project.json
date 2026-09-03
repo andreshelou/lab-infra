@@ -4,12 +4,16 @@
         {
             "id": "T001",
             "goal": "Crear hello.txt",
-            "status": "QUEUED",
+            "expected_result": "hello.txt debe contener dos lidneas",
+            "validation": "Leer hello.txt y verificar que tenga exactamente 2 l\u00edneas",
+            "status": "SENT",
             "depends_on": []
         },
         {
             "id": "T002",
             "goal": "Agregar segunda linea",
+            "expected_result": "hello.txt debe contener dos liedneas",
+            "validation": "Leer hello.txt y verificar que tenga exactamente 2 l\u00edneas",
             "status": "PENDING",
             "depends_on": [
                 "T001"
@@ -18,6 +22,8 @@
         {
             "id": "T003",
             "goal": "Agregar segunda linea",
+            "expected_result": "hello.txt debe contener dos lineas",
+            "validation": "Leer hello.txt y verificar que tenga exactamente 2 l\u00edneas",
             "status": "PENDING",
             "depends_on": [
                 "T001",
@@ -27,13 +33,17 @@
         {
             "id": "T004",
             "goal": "Crear hello.txt",
-            "status": "QUEUED",
+            "expected_result": "hello.txt debe contener dos lineas",
+            "validation": "Leer hello.txt y verificar que tenga exactamente 2 l\u00edneas",
+            "status": "SENT",
             "depends_on": []
         },
         {
             "id": "T005",
             "goal": "Agregar segunda linea",
-            "status": "QUEUED",
+            "expected_result": "hello.txt debe contener dos lineas",
+            "validation": "Leer hello.txt y verificar que tenga exactamente 2 l\u00edneas",
+            "status": "SENT",
             "depends_on": []
         }
     ]

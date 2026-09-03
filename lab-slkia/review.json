@@ -1,0 +1,14 @@
+[
+    {
+        "id": "T001",
+        "answer": "Para crear un archivo llamado `hello.txt` con dos l\u00edneas, puedes usar el siguiente comando en la terminal (en sistemas Linux o macOS):\n\n```bash\necho -e \"Hola\\nMundo\" > hello.txt\n```\n\nEste comando crea el archivo `hello.txt` con el contenido:\n\n```\nHola\nMundo\n```\n\nSi est\u00e1s en Windows, puedes usar el siguiente comando en PowerShell:\n\n```powershell\n\"Hello`nWorld\" | Out-File -FilePath hello.txt\n```\n\nO tambi\u00e9n puedes usar el comando `echo` de forma similar a Linux:\n\n```cmd\necho Hello&&echo World > hello.txt\n```\n\nUna vez ejecutado cualquiera de estos comandos, deber\u00edas tener un archivo `hello.txt` con dos l\u00edneas."
+    },
+    {
+        "id": "T004",
+        "answer": "```bash\n# Crear el archivo hello.txt con dos l\u00edneas\necho -e \"Hola Mundo\\nAdi\u00f3s\" > hello.txt\n\n# Verificar el contenido del archivo\ncat hello.txt\n```\n\nEste comando crear\u00e1 un archivo llamado `hello.txt` que contendr\u00e1 dos l\u00edneas:\n1. \"Hola Mundo\"\n2. \"Adi\u00f3s\"\n\nEl `-e` en `echo` permite el uso de secuencias de escape como `\\n` para la nueva l\u00ednea, y `>` redirige la salida al archivo."
+    },
+    {
+        "id": "T005",
+        "answer": "Para agregar una segunda l\u00ednea a `hello.txt` y que contenga dos l\u00edneas, puedes usar el siguiente comando:\n\n```bash\necho \"segunda linea\" >> hello.txt\n```\n\nEste comando agrega la l\u00ednea \"segunda linea\" al final del archivo `hello.txt`.\n\nPara verificar que el archivo contiene dos l\u00edneas, puedes usar:\n\n```bash\nwc -l hello.txt\n```\n\nO para ver el contenido completo:\n\n```bash\ncat hello.txt\n```\n\nEsto deber\u00eda mostrar algo como:\n```\nprimera linea\nsegunda linea\n```"
+    }
+]

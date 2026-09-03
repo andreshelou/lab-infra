@@ -8,7 +8,7 @@ with open("microtasks.json") as f:
 
 task_not_ready = []
 task_ready = []
- 
+
 for task in project["tasks"]:
 
     deps = []
@@ -20,10 +20,11 @@ for task in project["tasks"]:
                     if task_dep["status"] != "DONE":
                         deps.append(dep)
 
-
     if task["status"] == "PENDING":
+
         if len(deps) > 0:
             task_not_ready.append(task["id"])
+
         else:
             exists = False
 
@@ -32,13 +33,17 @@ for task in project["tasks"]:
                     exists = True
 
             if exists == False:
-                task_ready.append(task)
-                task["status"] = "QUEUED"
-            else:
-                task["status"] = "QUEUED"
 
-with open("project.json", "w") as g:
-    json.dump(project, g, indent=4)
+                microtask = task.copy()
+                microtask["status"] = "QUEUE"
+
+                task_ready.append(microtask)
+
+            task["status"] = "SENT"
+
+
+with open("project.json", "w") as f:
+    json.dump(project, f, indent=4)
 
 microtasks.extend(task_ready)
 
