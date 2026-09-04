@@ -1,0 +1,7 @@
+{
+    "id": "1",
+    "name": "Task name 1",
+    "path": "tasks/1.json",
+    "status": "",
+    "deps": []
+}

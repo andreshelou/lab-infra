@@ -1,0 +1,30 @@
+[
+    {
+        "id": "0",
+        "name": "Task name 0",
+        "path": "tasks/0.json",
+        "status": "",
+        "deps": []
+    },
+    {
+        "id": "1",
+        "name": "Task name 1",
+        "path": "tasks/1.json",
+        "status": "",
+        "deps": []
+    },
+    {
+        "id": "2",
+        "name": "Task name 2",
+        "path": "tasks/2.json",
+        "status": "",
+        "deps": []
+    },
+    {
+        "id": "3",
+        "name": "Task name 3",
+        "path": "tasks/3.json",
+        "status": "",
+        "deps": []
+    }
+]
